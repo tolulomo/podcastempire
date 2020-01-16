@@ -1,0 +1,194 @@
+.card {
+    position: relative;
+    height: 46rem;
+    -webkit-perspective: 150rem;
+    -ms-perspective: 150rem;
+    -moz-perspective: 150rem;
+    perspective: 150rem;
+    white-space: normal;
+    
+
+    &__side {
+        height: 46rem;
+        width: 100%;
+        position: absolute;
+        -webkit-backface-visibility: hidden;
+        backface-visibility: hidden;
+        transition: all .8s ease;
+        overflow: hidden;
+        border-radius: .3rem;
+        box-shadow: 0 1.5rem 4rem rgba($color-black, .15);
+        
+        &--front {
+            background-color: $color-white;
+        }
+
+        &--back {
+            transform: rotateY(180deg);
+           
+            &-1 {
+                background-image: linear-gradient(
+                    to right bottom, 
+                    $color-t-4, 
+                $color-t-4);
+            }
+
+            &-2 {
+                background-image: linear-gradient(
+                    to right bottom, 
+                    $color-t-2, 
+                $color-t-5);
+            }
+
+            &-3 {
+                background-image: linear-gradient(
+                    to right bottom, 
+                    $color-tertiary-light, 
+                $color-tertiary-dark);
+            }
+        }
+    }
+    
+    &:hover &__side--front {
+        -webkit-transform: rotateY(-180deg);
+        transform: rotateY(-180deg);
+    }
+
+    &:hover &__side--back {
+        -webkit-transform: rotateY(0);
+        transform: rotateY(0);
+    }
+
+    &__picture {
+        background-size: cover;
+        height: 70%;
+        background-blend-mode: screen;
+        -webkit-clip-path: polygon(0 0, 100% 0%, 100% 85%, 0% 100%);
+        clip-path: polygon(0 0, 100% 0%, 100% 85%, 0% 100%);
+        
+        &--1 {
+            background-image: linear-gradient(
+                to right bottom, 
+                rgba($color-secondary-light, .4), 
+                rgba($color-secondary-dark, .4)),
+            url(../img/nat-8-small.jpg);
+
+            @media only screen and (min-resolution: 192dpi) and (min-width: 56.25em), only screen and(-webkit-min-device-pixel-ratio: 2) and (min-width: 56.25em), only screen and (min-width: 125em) {
+                background-image: linear-gradient(
+                to right bottom, 
+                rgba($color-secondary-light, .4), 
+                rgba($color-secondary-dark, .4)),
+                url(../img/nat-8.jpg);
+            }
+        }
+
+        &--3 {
+            background-image:linear-gradient(
+                to right bottom, 
+                rgba($color-tertiary-light, .4), 
+                rgba($color-tertiary-dark, .4)),
+            url(../img/a02-small.jpg);
+
+            @media only screen and (min-resolution: 192dpi) and (min-width: 56.25em), only screen and (-webkit-min-device-pixel-ratio: 2) and (min-width: 56.25em), only screen and (min-width: 125em) {
+                background-image:linear-gradient(
+                    to right bottom, 
+                    rgba($color-tertiary-light, .4), 
+                    rgba($color-tertiary-dark, .4)),
+                url(../img/a02.jpg);
+            }
+        }
+    }
+    &__status-1 {
+        font-size: 1.5rem;
+        font-weight: 300;
+        color: $color-t-5;
+        position: absolute;
+        text-align: left;
+        top: .5rem;
+        left: .5rem;
+        text-transform: uppercase;
+        width: 75%;
+    }
+
+    &__header {
+        font-size: 2.8rem;
+        font-weight: 300;
+        color: $color-white;
+        position: absolute;
+        text-align: right;
+        top: 12rem;
+        right: 2rem;
+        text-transform: uppercase;
+        width: 70%;
+    }
+
+    &__header-span {
+        padding: 1rem 1.5rem;
+        -webkit-box-decoration-break: clone;
+        box-decoration-break: clone;
+
+        &--1{
+            background-image: linear-gradient(
+                to right bottom, 
+                rgba($color-secondary-light, .5), 
+            rgba($color-secondary-dark, .5));
+        }
+
+        &--2{
+            background-image: linear-gradient(
+                to right bottom, 
+                rgba($color-t-2, .5), 
+            rgba($color-t-5, .5));
+        }
+
+        &--3{
+            background-image: linear-gradient(
+                to right bottom, 
+                rgba($color-tertiary-light, .5), 
+            rgba($color-tertiary-dark, .5));
+        }
+    }
+
+    &__details {
+        padding: 1rem;
+
+        ul {
+            list-style: none;
+            width: 90%;
+            margin: 0 auto;
+
+            li {
+                font-size: 1.5rem;
+                padding: .6rem .5rem;
+                text-align: center;
+                font-weight: 350;
+
+                &:not(:last-child) {
+                    border-bottom: .1rem solid $color-grey-light;
+                }
+            }
+        }
+    }
+
+    &__cta {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        text-align: center;
+        width: 90%;
+    }
+
+    &__price {
+        color: $color-white;
+
+        &-only {
+            font-size: 1.4rem;
+        }
+
+        &-value {
+            font-size: 6rem;
+            font-weight: 100;
+        }
+    }
+}

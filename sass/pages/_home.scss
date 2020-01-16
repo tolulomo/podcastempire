@@ -1,0 +1,114 @@
+.section-trending {
+    background-image: linear-gradient(105deg, 
+                        rgba(transparent, 0) 0%,
+                        rgba(transparent, 0) 100%, 
+                        transparent 99%), 
+    url(../img/stripes-light.png);
+    padding: 24rem 0 15rem 0;
+    
+    @include respond(big-desktop) {
+        margin-top: -22vh;       
+    }
+
+    @include respond(tab-port) {
+        margin-top: -22vh;       
+    }
+    
+    @include respond(phone) {
+        margin-top: -29vh;       
+    }
+    
+    @include respond(sphone) {
+        margin-top: -22vh;       
+    }
+
+    &__group {
+        background-color: rgba($color-t-1, .5);
+
+        @include respond(tab-port) {
+            margin-top: 3rem
+        }
+
+        @include respond(phone) {
+            margin-top: 4rem;
+        }
+
+        @include respond(sphone) {
+            margin-top: 3rem;
+        }
+    }
+
+    &__heading {
+        background-color: $color-t-5;
+
+        @include respond(sphone) {
+            padding: 1rem;
+        }
+
+        @include respond(ssphone) {
+            padding: 1rem;
+        }
+    }
+
+    .premium {
+        margin: -15rem auto 0 auto;
+        width: 95%;
+        background-image: linear-gradient(105deg, 
+                        rgba($color-white, .8) 0%,
+                        rgba($color-white, .8) 50%, 
+                        transparent 50%), 
+        url(../img/splash-02.jpg);
+        border-radius: .3rem;
+        box-shadow: 0 1.5rem 4rem rgba($color-black, .2);
+        height: 33rem;
+        background-size: cover;
+        background-position: center;
+
+        @include respond(tab-port) {
+            background-image: linear-gradient(105deg, 
+                        rgba($color-white, .8) 0%,
+                        rgba($color-white, .8) 70%, 
+                        transparent 95%), 
+        url(../img/splash-02.jpg);
+        }
+    }
+
+    @include respond(ssphone) {
+        margin-top: -16vh !important;
+    }
+}
+
+.section-book {
+    margin-top: -12rem;
+    padding: 30rem 0 15rem 0;
+    background-image: linear-gradient(to right bottom, $color-primary, $color-primary-dark);
+}
+
+.book {
+    margin-top: -10rem;
+    width: 95%;
+    background-image: linear-gradient(105deg, 
+                    rgba($color-white, .8) 0%,
+                    rgba($color-white, .8) 50%, 
+                    transparent 50%), 
+    url(../img/nat-10.jpg);
+    border-radius: .3rem;
+    box-shadow: 0 1.5rem 4rem rgba($color-black, .2);
+    height: 50rem;
+    background-size: cover;
+
+    &__form {
+        width: 50%;
+        padding: 6rem;
+    }
+}
+
+.page-footer {
+    background-color: $color-t-5;
+    padding: 5rem 10rem 3rem 10rem;
+    margin-top: -12rem;
+
+    @include respond(phone) {
+        padding: 5rem 1rem 3rem 1rem;
+    }
+}

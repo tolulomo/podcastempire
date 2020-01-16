@@ -1,0 +1,56 @@
+*, 
+*::before, 
+*::after {
+    margin: 0;
+    padding: 0;
+    box-sizing: inherit;
+}
+
+html {
+    font-size: 62.5%;
+
+    @include respond(tab-land) {
+        font-size: 56.25%;
+    }
+
+    @include respond(tab-port) {
+        font-size: 50%;
+    }
+
+    @include respond(phone) {
+        font-size: 43.7%
+    }
+
+    @include respond(sphone) {
+        font-size: 31.25%
+    }
+}
+
+body {
+    font-family: "Lato", sans-serif;
+    line-height: 1.7;
+    font-weight: 400;
+    color: $color-t-5;
+    box-sizing: border-box;
+    
+    &::-webkit-scrollbar {
+        width: 1em;
+
+       &-track {
+            -webkit-box-shadow: inset 0 0 6px rgba($color-t-3,0.95);
+        }
+
+        &-thumb {
+          background-color: $color-t-5;
+          outline: 1px solid $color-t-5;
+        }
+    }
+
+}
+
+::selection {
+    background-color: $color-t-5;
+    color: $color-white;
+}
+ 
+ 

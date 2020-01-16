@@ -1,0 +1,74 @@
+.footer-link {
+    color: $color-t-2;
+    font-size: 2rem;
+    font-weight: 300;
+    list-style: none;
+    line-height: 1.5;
+    
+
+    &__text {
+        transition: all .3s ease;
+
+        & > a {
+            text-decoration: none;
+            color: inherit;
+            z-index: 3000   
+        }
+
+        &:hover {
+            font-size: 2.5rem;
+            cursor: pointer;
+            transform: translateX(-1rem);
+            box-shadow: 0 1rem 2rem rgba($color-black, .25); 
+
+            @include respond(tab-port) {
+                font-size: 2.2rem;
+            }
+        }
+    }
+    
+    &__icon {
+        display: inline;
+        font-size: 4rem;
+        transition: all .2s ease;
+
+        &:not(:last-child){
+            margin-right: 3rem;
+        }
+
+        &:hover {
+            cursor: pointer;
+            transform: translateX(-1rem);
+            box-shadow: 0 1rem 2rem rgba($color-black, .25); 
+        }
+    }
+
+    &__form--container {
+        max-width: 80%;
+        position: relative;
+    }
+
+    &__form--button {
+        position: absolute;
+        display: inline;
+        right: -4.8rem;
+        top: 1.8%;
+
+        @include respond(tab-port) {
+            right: -5.5rem;
+        }
+
+    }
+
+    &__sta {
+
+        @include respond(phone) {
+            width: 100% !important;
+            display: block !important;
+        }
+    }
+
+    @include respond(phone) {
+        width: 100%;
+    }
+}

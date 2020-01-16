@@ -1,0 +1,45 @@
+@keyframes header-primary-anim {
+    0% {
+        opacity: 0;
+        transform: translateX(-10rem);
+    }
+
+    90% {
+        transform: translateX(1rem);
+    }
+
+    100% {
+        opacity: 1;
+        transform: translate(0)
+    }
+
+}
+
+@keyframes header-primary-sub {
+    0% {
+        opacity: 0;
+        transform: translateX(10rem);
+    }
+
+    90% {
+        transform: translateX(-1rem);
+    }
+
+    100% {
+        opacity: 1;
+        transform: translate(0)
+    }
+
+}
+
+@keyframes btn-animations {
+    0%{
+        opacity: 0;
+        transform: translateY(3rem);
+    }
+
+    100% {
+        opacity: 1;
+        transform: translate(0);
+    }
+}

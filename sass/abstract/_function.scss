@@ -1,0 +1,13 @@
+%btn-p01 {
+    font-size: 1.6rem;
+    display: inline-block;
+    padding: .3rem;
+    text-decoration: none;
+    transition: all .3s;
+}
+
+%btn-p01-hover {
+    transform: translateY(-0.3rem);
+    border-radius: .4rem;
+    padding: .8rem;
+}

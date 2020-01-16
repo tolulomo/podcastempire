@@ -1,0 +1,70 @@
+.u-center-text {text-align: center;}
+
+.u-margin-bottom-big {margin-bottom: 8rem;}
+.u-margin-bottom-medium {margin-bottom: 4rem;}
+
+.u-margin-bottom-smallest {margin-bottom: 1.5rem;}
+
+.u-margin-top-huge {margin-top: 7rem;
+    @include respond(tab-port) {
+        margin-top: 1rem;
+    }
+}
+
+.u-margin-top-medium {margin-top: 5rem;}
+
+.u-margin-top-small {margin-top: 2rem;}
+
+.u-margin-top-huger {margin-top: 15rem;}
+
+.u-margin-left {
+    margin-left: 2rem !important;
+}
+
+.set-left-p {padding-left: .7rem;}
+
+.set-left-p-medium {padding-left: 4rem !important;}
+
+.set-right-p-medium {padding-right: 4rem !important;}
+
+.u-b-r { border-radius: 15rem !important; }
+
+.u-f-s {
+    font-family: $secondary-font !important;
+}
+
+.u-f-ss { 
+    font-size: $default-font-size-3 !important;
+
+    @include respond(phone){
+        font-size: $default-font-size-4 !important;
+    }
+}
+
+.u-increase {font-size: 1.2rem !important;}
+
+.u-increase-big {font-size: 2rem !important;}
+
+.u-bg-c01 {background-image: linear-gradient(to right, $color-secondary-light, $color-secondary-dark) !important;}
+
+.u-bg-c02 {background-image: linear-gradient(to right, $color-tertiary-light, $color-tertiary-dark) !important;}
+
+.u-setter { 
+    margin-left: auto !important;
+    margin-right: auto !important;
+}
+
+.u-display {
+    height: 15rem !important;
+    overflow: hidden !important;
+    position: relative !important;
+}
+
+
+.u-color-pri {
+    color: $color-t-5;
+}
+
+.u-dblock {
+    display: block !important;
+}
